@@ -1,5 +1,5 @@
 # poker-cpp-cards-mixer-win32
-Quick example for mixing cards of a poker set using dSFMT and calling the Windows cryptographic service provider (CSP) by the wincrypt api in C++
+Quick example for mixing cards of a poker set using dSFMT and calling the Windows cryptographic service provider (CSP) by leveraging the wincrypt api in C++
 
 Following same recommendations as PKR.fr (see here: http://www.pkr.fr/fr/support/licensing-and-integrity/monthly-certificates/ )
 
