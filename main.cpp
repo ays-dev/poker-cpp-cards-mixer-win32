@@ -1,7 +1,7 @@
 #include <iostream>
 #include <windows.h>
 #include <wincrypt.h>
-#include "src/dSFMT.h"
+#include "dSFMT/dSFMT.h"
 
 using namespace std;
 
