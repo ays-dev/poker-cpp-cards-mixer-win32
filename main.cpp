@@ -47,9 +47,7 @@ int main()
     }
 
     for(unsigned int i=0; i < sizeof(pbBuffer); i++)
-    {
-        converter.array[i]=pbBuffer[i];
-    }
+        converter.array[i] = pbBuffer[i];
 
     init_gen_rand(converter.integer);
 
@@ -65,9 +63,7 @@ int main()
     qsort(deck, 48, sizeof *deck, compare);
 
     for(i=0; i<48; i++)
-    {
-        cout << "Carte: " << deck[i].name << endl;
-    }
+        cout << "Card: " << deck[i].name << endl;
 
     if (!::CryptReleaseContext(hProvider, 0))
         return 1;
