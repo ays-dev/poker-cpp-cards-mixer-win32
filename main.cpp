@@ -8,7 +8,7 @@ using namespace std;
 union ArrayToInteger
 {
     uint32_t integer;
-    byte array[DSFMT_MEXP];
+    byte array[DSFMT_MEXP]; /* DSFMT_MEXP size is 19937 */
 };
 
 struct Deck
@@ -18,7 +18,7 @@ struct Deck
     char name[4];
 };
 
-int compare(const void* pi1, const void* pi2)
+int order(const void* pi1, const void* pi2)
 {
     double i1 = *(double*)pi1;
     double i2 = *(double*)pi2;
@@ -59,8 +59,8 @@ int main()
         deck[i].name[3] = tab[i][3];
         deck[i].value = genrand_close_open();
     }
-
-    qsort(deck, 48, sizeof *deck, compare);
+    /* After generating their values we can order cards by their primary key*/
+    qsort(deck, 48, sizeof *deck, order); /* A fastest impletementation can be used here feel free to use your own logic  */
 
     for(i = 0; i < 48; i++)
         cout << "Card: " << deck[i].name << endl;
