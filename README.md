@@ -3,6 +3,11 @@ Quick example for mixing cards of a poker set using dSFMT and calling the Window
 
 Following same recommendations as PKR.fr (see here: http://www.pkr.fr/fr/support/licensing-and-integrity/monthly-certificates/ )
 
+To form the seed for the random number generator, a calling application supplies bits it might have—for instance, mouse or keyboard timing input—that are then combined with both the stored seed and various system data and user data such as the process ID and thread ID, the system clock, the system time, the system counter, memory status, free disk clusters, the hashed user environment block. This result is used to seed the pseudorandom number generator (PRNG)
+
+See doc : https://msdn.microsoft.com/en-us/library/aa379942%28v=vs.85%29.aspx
+
+More infos:
 
 What is SFMT?
 SFMT is a new variant of Mersenne Twister (MT) introduced by Mutsuo Saito and Makoto Matsumoto in 2006.
